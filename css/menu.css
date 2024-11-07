@@ -1,0 +1,42 @@
+header{
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+header>nav{
+    border-style: groove;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+header>nav>p{
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 3%;
+}
+
+header>nav>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    grid-column: 2;
+    grid-row: 1;
+    list-style-type: none;
+    white-space: nowrap;
+}
+
+nav a{
+    margin-right: 3%;
+    color: rgb(103, 103, 103);
+    text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+.CV{
+    color: red;
+}

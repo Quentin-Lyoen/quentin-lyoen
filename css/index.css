@@ -1,0 +1,127 @@
+/* Présentation */
+#presentation{
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.presentation{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+h1{
+    text-align: center;
+    font-size: 2em;
+}
+
+.presentation img{
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 50%;
+    margin-top: 5%;
+}
+
+.presentation p{
+    font-size: 1.2em;
+    background-color: rgb(247, 246, 246);
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/* Compétences */
+#competences{
+    background-color: rgb(241, 241, 241);
+}
+
+.competences{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.competences .prog{
+    margin-left: 40%;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.competences .logiciels{
+    margin-left: 40%;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.competences .langue{
+    margin-left: 20%;
+    grid-column: 3;
+    grid-row: 1;
+}
+
+/*Diplômes*/
+#diplomes{
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.diplomes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.diplomes .but{
+    margin-left: 60%;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.diplomes .bac{
+    margin-left: 15%;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/*Portfolio*/
+#portfolio{
+    background-color: rgb(241, 241, 241);
+}
+
+#portfolio>h2{
+    text-align: center;
+    color: rgb(90, 89, 89);
+}
+
+.portfolio section{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+    margin-bottom: 3em;
+}
+
+.portfolio h2{
+    margin-left: 1em;
+}
+
+.portfolio section img{
+    grid-column: 1;
+    grid-row: 1;
+    width: 20em;
+}
+
+.portfolio section p{
+    margin-left: 1em;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#contact{
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+#contact h1{
+    text-align: center;
+}
+#contact h3{
+    margin-left: 40%;
+}
