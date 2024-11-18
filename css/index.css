@@ -23,6 +23,7 @@ h1{
 }
 
 .presentation p{
+    text-align: justify;
     font-size: 1.2em;
     background-color: rgb(247, 246, 246);
     grid-column: 2;
@@ -110,14 +111,13 @@ h1{
 }
 
 .portfolio section p{
+    text-align: justify;
     margin-left: 1em;
     grid-column: 2;
     grid-row: 1;
 }
 
 #contact{
-    padding-top: 5em;
-    padding-bottom: 5em;
     border: solid;
 }
 #contact h1{
