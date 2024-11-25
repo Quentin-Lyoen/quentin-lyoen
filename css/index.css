@@ -102,6 +102,7 @@ h1{
 
 .portfolio h2{
     margin-left: 1em;
+    color: rgb(238, 99, 99);
 }
 
 .portfolio section img{
@@ -117,6 +118,7 @@ h1{
     grid-row: 1;
 }
 
+/*Contacts*/
 #contact{
     border: solid;
 }
@@ -124,5 +126,5 @@ h1{
     text-align: center;
 }
 #contact h3{
-    margin-left: 40%;
+    margin-left: 37%;
 }
