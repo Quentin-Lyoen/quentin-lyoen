@@ -59,6 +59,10 @@ h1{
     grid-row: 1;
 }
 
+.competences ul li:hover{
+    font-size: 1.5em;
+}
+
 /*Diplômes*/
 #diplomes{
     padding-top: 5em;
@@ -69,6 +73,10 @@ h1{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
+}
+
+.diplomes p{
+    font-size: 1.2em;
 }
 
 .diplomes .but{
@@ -112,6 +120,7 @@ h1{
 }
 
 .portfolio section p{
+    font-size: 1.3em;
     text-align: justify;
     margin-left: 1em;
     grid-column: 2;
@@ -126,5 +135,6 @@ h1{
     text-align: center;
 }
 #contact h3{
-    margin-left: 37%;
+    /*margin-left: 38%;*/
+    text-align: center;
 }
