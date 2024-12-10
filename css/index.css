@@ -4,6 +4,13 @@
     padding-bottom: 5em;
 }
 
+#presentation a{
+    text-align: center;
+    text-decoration: none;
+    color: rgb(250, 123, 123);
+    font-size: 1.2em;
+}
+
 .presentation{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -136,5 +143,29 @@ h1{
 }
 #contact h3{
     /*margin-left: 38%;*/
+    text-align: center;
+}
+
+
+/*Soft-Skills*/
+#softskills>section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+#softskills>section section{
+    text-align: center;
+}
+
+
+/*Passions*/
+#passions>section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+#passions>section section{
     text-align: center;
 }
