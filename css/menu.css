@@ -4,20 +4,21 @@ header{
     background-color: white;
 }
 
-header>nav{
+header nav{
     border-style: groove;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
+    z-index: 3;
 }
 
-header>nav>p{
+header nav p{
     grid-column: 1;
     grid-row: 1;
     margin-left: 3%;
 }
 
-header>nav>ul{
+header nav ul{
     display: flex;
     flex-direction: row;
     justify-content: right;
