@@ -153,6 +153,10 @@ h1{
 
 
 /*Soft-Skills*/
+#softskills{
+    margin-top: 5em;
+}
+
 #softskills>section{
     display: flex;
     justify-content: center;

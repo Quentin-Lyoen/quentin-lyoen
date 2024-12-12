@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" href="img/logo.PNG">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -11,17 +11,33 @@
 </head>
 <body>
     <header>
-        <nav>
-            <p><a href="./index.html">QL</a></p>
-            <ul>
-                <a href="#presentation"><li>À propos</li></a>
-                <a href="#competences"><li>Compétences</li></a>
-                <a href="#diplomes"><li>Diplômes</li></a>
-                <a href="#portfolio"><li>Portfolio</li></a>
-                <a href="#contact"><li>Me contacter</li></a>
-                <a class="CV" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1zzfVEbsiO5dZ3InUMaXMgQEfKOKTaID4/view?usp=sharing"><li>CV</li></a>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html#">QL</a>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html#presentation">À propos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html#competences">Compétences</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html#diplomes">Diplômes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html#portfolio">Portfolio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html#contact">Me contacter</a>
+                  </li>
+                  <li class="nav-item">
+                    <a target="_blank" id="CV" class="nav-link active" aria-current="page" href="https://drive.google.com/file/d/1zzfVEbsiO5dZ3InUMaXMgQEfKOKTaID4/view?usp=sharing">CV</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
 
     <main>
@@ -42,6 +58,7 @@
     </section>
 
     <section id="competences">
+        <br>
         <h1>- Compétences -</h1>
         <section class="competences">
             <section class="prog">
@@ -96,6 +113,7 @@
     </section>
 
     <section id="portfolio">
+        <br>
         <h1>- Portfolio -</h1>
         <h2>Projets Universitaire : </h2> <br>
         <section class="portfolio">

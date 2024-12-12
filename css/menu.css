@@ -1,29 +1,8 @@
-header{
-    position: sticky;
-    top: 0;
-    background-color: white;
-}
-
 header nav{
     border-style: groove;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    z-index: 3;
-}
-
-header nav p{
-    grid-column: 1;
-    grid-row: 1;
-    margin-left: 3%;
 }
 
 header nav ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    grid-column: 2;
-    grid-row: 1;
     list-style-type: none;
     white-space: nowrap;
 }
@@ -36,9 +15,8 @@ nav a{
 
 nav ul a:hover{
     text-decoration: underline;
-    font-size: 1.3em;
 }
 
-.CV{
+#CV{
     color: red;
 }
