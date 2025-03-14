@@ -1,189 +1,179 @@
-/* Présentation */
-#presentation{
-    padding-top: 5em;
-    padding-bottom: 5em;
+/* Styles généraux */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eaeaea;
+    color: #222;
 }
 
-#presentation a{
+header {
+    background: #444;
+    color: white;
+    padding: 1rem;
     text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
     text-decoration: none;
-    color: rgb(250, 123, 123);
-    font-size: 1.2em;
+    color: white;
+    font-weight: bold;
 }
 
-.presentation{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    margin-left: 5em;
-    margin-right: 5em;
+/* Mise en page générale */
+section {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1{
+h1 {
     text-align: center;
-    font-size: 2em;
+    color: #444;
 }
 
-.presentation img{
-    grid-column: 1;
-    grid-row: 1;
-    margin-left: 50%;
-    margin-top: 5%;
+/* Présentation */
+.presentation {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-.presentation p{
-    text-align: justify;
-    font-size: 1.2em;
-    background-color: rgb(247, 246, 246);
-    grid-column: 1;
-    grid-row: 1;
+.presentation img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 /* Compétences */
-#competences{
-    background-color: rgb(241, 241, 241);
-}
-
-.competences{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-}
-
-.competences .prog{
-    margin-left: 40%;
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.competences .logiciels{
-    margin-left: 40%;
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.competences .langue{
-    margin-left: 20%;
-    grid-column: 3;
-    grid-row: 1;
-}
-
-.competences ul li:hover{
-    font-size: 1.5em;
-}
-
-/*Diplômes*/
-#diplomes{
-    padding-top: 5em;
-    padding-bottom: 5em;
-}
-
-.diplomes{
+.competences {
     display: flex;
-    justify-content: center;
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.diplomes .card{
-    margin-right: 1em;
+.competences section {
+    background: #666;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    flex: 1;
+    min-width: 150px;
 }
 
-.diplomes p{
-    font-size: 1.2em;
-}
-
-.diplomes .but{
-    /*margin-left: 60%;
-    grid-column: 1;
-    grid-row: 1;*/
+.competences h2 {
     text-align: center;
 }
 
-.diplomes .bac{
-    /*margin-left: 15%;
-    grid-column: 2;
-    grid-row: 1;*/
-    text-align: center;
-}
-
-/*Portfolio*/
-#portfolio{
-    background-color: rgb(241, 241, 241);
-}
-
-#portfolio>h2{
-    text-align: center;
-    color: rgb(90, 89, 89);
-}
-
-.portfolio section{
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr;
-    margin-bottom: 3em;
-}
-
-.portfolio h2{
-    margin-left: 1em;
-    color: rgb(238, 99, 99);
-}
-
-.portfolio section img{
-    grid-column: 1;
-    grid-row: 1;
-    width: 20em;
-}
-
-.portfolio section p{
-    font-size: 1.3em;
-    text-align: justify;
-    margin-left: 1em;
-    grid-column: 2;
-    grid-row: 1;
-}
-
-/*Contacts*/
-#contact{
-    border: solid;
-}
-#contact h1{
-    text-align: center;
-}
-#contact h3{
-    /*margin-left: 38%;*/
-    text-align: center;
-}
-
-
-/*Soft-Skills*/
-#softskills{
-    margin-top: 5em;
-}
-
-#softskills>section{
+/* Diplômes */
+.diplomes {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-#softskills>section section{
+.diplomes section {
+    background: #666;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 48%;
     text-align: center;
 }
 
-#softskills .card{
-    margin-right: 2%
-}
-
-
-/*Passions*/
-#passions>section{
+/* Portfolio */
+.portfolio section {
     display: flex;
-    justify-content: center;
-    margin-bottom: 3em;
+    align-items: center;
+    gap: 1rem;
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
 }
 
-#passions>section section{
+.portfolio img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Contact */
+#contact {
     text-align: center;
+    background: #444;
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
 }
 
-#passions .card{
-    margin-right: 2%;
+#contact a {
+    text-decoration: none;
+    color: #bbbbbb;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .presentation {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .competences {
+        flex-direction: column;
+    }
+
+    .diplomes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .diplomes section {
+        width: 100%;
+    }
+
+    .portfolio section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .portfolio img {
+        width: 100px;
+    }
 }
