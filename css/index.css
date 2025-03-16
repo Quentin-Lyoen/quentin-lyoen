@@ -1,5 +1,4 @@
 /* Styles généraux */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -19,15 +18,23 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 1.5rem 2rem;
+    background: #333;
     color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -38,6 +45,11 @@ nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+}
+
+/* Ajout de marge en haut pour éviter que le contenu soit caché sous la navbar */
+main {
+    margin-top: 100px;
 }
 
 /* Mise en page générale */
@@ -83,11 +95,8 @@ h1 {
     padding: 1rem;
     border-radius: 5px;
     flex: 1;
-    min-width: 150px;
-}
-
-.competences h2 {
     text-align: center;
+    min-width: 150px;
 }
 
 /* Diplômes */
@@ -120,6 +129,38 @@ h1 {
     width: 150px;
     height: auto;
     border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Soft-Skills et Passions */
+.card {
+    background: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+#softskills section, #passions section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 /* Contact */
@@ -146,6 +187,8 @@ h1 {
     nav {
         flex-direction: column;
         align-items: center;
+        padding: 1rem;
+        font-size: 1rem;
     }
 
     .presentation {
