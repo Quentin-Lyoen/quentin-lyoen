@@ -7,7 +7,7 @@ body {
     color: #222;
 }
 
-header {
+main nav {
     color: white;
     padding: 1rem;
     text-align: center;
@@ -68,6 +68,13 @@ h1 {
 }
 
 /* Présentation */
+#presentation{
+    display: none;
+}
+
+#presentation.active{
+    display: block;
+}
 
 .presentation {
     display: flex;
@@ -83,6 +90,14 @@ h1 {
 }
 
 /* Compétences */
+#competences{
+    display: none;
+}
+
+#competences.active{
+    display: block;
+}
+
 .competences {
     display: flex;
     gap: 1rem;
@@ -101,6 +116,14 @@ h1 {
 }
 
 /* Diplômes */
+#diplomes{
+    display: none;
+}
+
+#diplomes.active{
+    display: block;
+}
+
 .diplomes {
     display: flex;
     justify-content: space-between;
@@ -116,6 +139,22 @@ h1 {
 }
 
 /* Portfolio */
+#portfolio{
+    display: none;
+}
+
+#portfolio.active{
+    display: block;
+}
+
+.portfolio{
+    display: none;
+}
+
+.portfolio.activeP{
+    display: block;
+}
+
 .portfolio section {
     display: flex;
     align-items: center;

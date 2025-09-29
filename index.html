@@ -8,23 +8,27 @@
     <link rel="icon" href="img/logo.PNG">
     
     <title>Quentin LYOEN / CV numérique</title>
+
+    <script type="module" src="src/index.js" defer></script>
 </head>
 <body>
     <header>
+        
+    </header>
+
+    <main>
+        
         <nav>
-              <a href="index.html#">Quentin Lyoen</a>
+              <a href="index.html#" class="menu accueilB">Quentin Lyoen</a>
                 <ul>
                   <li>
-                    <a aria-current="page" href="index.html#presentation">À propos</a>
+                    <a aria-current="page" href="index.html#competences" class="menu competencesB">Compétences</a>
                   </li>
                   <li>
-                    <a aria-current="page" href="index.html#competences">Compétences</a>
+                    <a aria-current="page" href="index.html#diplomes" class="menu diplomesB">Diplômes</a>
                   </li>
                   <li>
-                    <a aria-current="page" href="index.html#diplomes">Diplômes</a>
-                  </li>
-                  <li>
-                    <a aria-current="page" href="index.html#portfolio">Portfolio</a>
+                    <a aria-current="page" href="index.html#portfolio" class="menu portfolioB">Portfolio</a>
                   </li>
                   <li class="nav-item">
                     <a aria-current="page" href="index.html#contact">Me contacter</a>
@@ -34,13 +38,11 @@
                   </li>
                 </ul>
           </nav>
-    </header>
 
-    <main>
-    <section id="presentation">
+    <section id="presentation" class="active">
         <h1>- À propos de moi -</h1>
         <section class="presentation">
-            <p>Je suis actuellement étudiant en deuxième année de BUT informatique. Cette formation était pour moi une évidence car j'aime
+            <p>Je suis actuellement étudiant en troisième année de BUT informatique. Cette formation était pour moi une évidence car j'aime
                 programmer depuis le collège. J'y ai développé beaucoup de jeux, mais qui sont restés privés. Aujourd'hui je suis toujours
                 animé par cette passion de créer des choses grâce à l'informatique. Je suis très curieux et j'aime apprendre de nouveaux langages informatiques
                 afin de monter en compétences. Les nouvelles technologies et les enjeux qui y sont liés m'intriguent profondément. <br><br>
@@ -52,7 +54,7 @@
         <a href="./softskills.html"><p style="text-align: center;">👉​ En savoir plus sur mes savoirs être 👈​</p></a>
     </section>
 
-    <section id="competences">
+    <section id="competences" class="">
         <br>
         <h1>- Compétences -</h1>
         <section class="competences">
@@ -82,7 +84,7 @@
         </section>
     </section>
 
-    <section id="diplomes">
+    <section id="diplomes" class="">
         <h1>- Diplômes -</h1>
         <section class="diplomes">
                 <section class="but">
@@ -101,11 +103,12 @@
         </section>
     </section>
 
-    <section id="portfolio">
+    <section id="portfolio" class="">
         <br>
         <h1>- Portfolio -</h1>
-        <h2>Projets Universitaire : </h2> <br>
-        <section class="portfolio">
+        <h2><a href="" class="univB">Projets Universitaire</a></h2>
+        <h2><a href="" class="persoB">Projets Personnels</a></h2> <br>
+        <section class="portfolio univ">
             <h2>Création d'un jeu multijoueur</h2>
             <section>
                 <img src="./img/steve.png" alt="steve">
@@ -173,8 +176,8 @@
             </section>
         </section>
 
-        <h2>Projets Personnels : </h2> <br>
-        <section class="portfolio">
+        
+        <section class="portfolio perso">
             <h2>Développement d'un jeu pour une TriJam</h2>
             <section>
                 <img src="./img/trijam.PNG" alt="trijam">
