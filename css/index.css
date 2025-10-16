@@ -1,271 +1,187 @@
-/* Styles généraux */
+/* Site global styles (except nav) */
+
+/* CSS variables */
+:root {
+  --bg: #0b1020;          /* deep slate/navy */
+  --bg-soft: #0f172a;     /* slate-900 */
+  --text: #e2e8f0;        /* slate-200 */
+  --muted: #94a3b8;       /* slate-400 */
+  --primary: #2563eb;     /* blue-600 */
+  --primary-700: #1d4ed8; /* blue-700 */
+  --card: #111827;        /* gray-900 */
+  --border: rgba(148,163,184,.15);
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+html, body {
+  height: 100%;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #eaeaea;
-    color: #222;
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, Noto Sans, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  background: var(--bg-soft);
+  color: var(--text);
+  line-height: 1.6;
 }
 
-main nav {
-    color: white;
-    padding: 1rem;
-    text-align: center;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem;
-    background: #333;
-    color: white;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 1.2rem;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 1rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-/* Ajout de marge en haut pour éviter que le contenu soit caché sous la navbar */
 main {
-    margin-top: 100px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-/* Mise en page générale */
-section {
-    padding: 20px;
-    max-width: 900px;
-    margin: 20px auto;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+h1, h2, h3 {
+  line-height: 1.2;
+  margin: .2rem 0 .8rem;
 }
 
 h1 {
-    text-align: center;
-    color: #444;
+  text-align: center;
+  font-size: clamp(1.6rem, 1.2rem + 2vw, 2.4rem);
 }
 
-/* Présentation */
-#presentation{
-    display: none;
+h2 {
+  font-size: clamp(1.2rem, 1.05rem + 1vw, 1.6rem);
 }
 
-#presentation.active{
-    display: block;
+p, li {
+  color: var(--text);
 }
 
-.presentation {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+a { color: var(--primary); }
+a:hover, a:focus { color: var(--primary-700); }
+
+/* Sections */
+section { padding: 1rem 0; }
+
+/* Top-level sections switching via .active (controlled by JS in menu.js) */
+main > section { display: none; }
+main > section.active { display: block; }
+/* Keep contact always visible regardless of active section */
+main > section#contact { display: block !important; }
+
+/* Presentation */
+.presentation p {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow);
 }
 
-.presentation img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* Compétences */
-#competences{
-    display: none;
-}
-
-#competences.active{
-    display: block;
-}
-
+/* Competences grid */
 .competences {
-    display: flex;
-    gap: 1rem;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
 .competences section {
-    background: #666;
-    color: white;
-    padding: 1rem;
-    border-radius: 5px;
-    flex: 1;
-    text-align: center;
-    min-width: 150px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
 }
 
-/* Diplômes */
-#diplomes{
-    display: none;
-}
+.competences h2 { margin-top: 0; }
+.competences ul { margin: .5rem 0 0; padding-left: 1.2rem; }
 
-#diplomes.active{
-    display: block;
-}
-
+/* Diplomes */
 .diplomes {
-    display: flex;
-    justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
 .diplomes section {
-    background: #666;
-    color: white;
-    padding: 1rem;
-    border-radius: 5px;
-    width: 48%;
-    text-align: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
 }
 
-/* Portfolio */
-#portfolio{
-    display: none;
+/* Portfolio filter "buttons" based on existing anchors */
+.univB, .persoB {
+  display: inline-flex;
+  align-items: center;
+  padding: .55rem .9rem;
+  margin: .25rem .35rem;
+  border-radius: .7rem;
+  border: 1px solid var(--border);
+  background: rgba(148,163,184,.08);
+  color: var(--text);
+  text-decoration: none;
+  transition: background-color .2s ease, border-color .2s ease;
 }
 
-#portfolio.active{
-    display: block;
+.univB:hover, .univB:focus,
+.persoB:hover, .persoB:focus { background: rgba(148,163,184,.16); }
+
+/* Place the two portfolio buttons on one line and centered */
+#portfolio { text-align: center; }
+#portfolio > h2 { display: inline-block; margin: 0 .35rem 0; }
+
+/* Portfolio cards */
+.portfolio {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
 }
 
-.portfolio{
-    display: none;
-}
+.portfolio > h2 { margin: 1rem 0 .5rem; }
 
-.portfolio.activeP{
-    display: block;
-}
-
-.portfolio section {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background: #f4f4f4;
-    padding: 1rem;
-    border-radius: 5px;
-    margin-bottom: 2rem;
+.portfolio > section {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1rem;
+  align-items: start;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
 }
 
 .portfolio img {
-    width: 150px;
-    height: auto;
-    border-radius: 5px;
-    display: block;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: .6rem;
 }
 
-.portfolio span{
-    color: rgb(192, 42, 42);
-}
-
-/* Soft-Skills et Passions */
-.card {
-    background: #f4f4f4;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    margin: 1rem;
-    text-align: center;
-}
-
-.card img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-}
-
-.card-body {
-    padding: 1rem;
-}
-
-#softskills section, #passions section {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
+.portfolio p span { color: #cbd5e1; }
 
 /* Contact */
 #contact {
-    text-align: center;
-    background: #444;
-    color: white;
-    padding: 2rem;
-    border-radius: 10px;
+    background: #1a294a; /* match nav background */
+  border-top: 1px solid rgba(148,163,184,.2);
 }
+#contact h3 { font-weight: 500; }
 
-#contact a {
-    text-decoration: none;
-    color: #bbbbbb;
-    font-weight: bold;
-}
-
-#contact a:hover {
-    text-decoration: underline;
-}
-
-#contact h1{
-    color: white;
-    font-weight: bold;
-}
+/* Portfolio visibility driven by .activeP (controlled by JS in portfolio.js) */
+.portfolio { display: none; }
+.portfolio.activeP { display: block; }
 
 /* Responsive */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        font-size: 1rem;
-    }
-
-    .presentation {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .competences {
-        flex-direction: column;
-    }
-
-    .diplomes {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .diplomes section {
-        width: 100%;
-    }
-
-    .portfolio section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .portfolio img {
-        width: 100px;
-    }
+@media (max-width: 900px) {
+  .competences { grid-template-columns: 1fr 1fr; }
+  .diplomes { grid-template-columns: 1fr; }
 }
+
+@media (max-width: 700px) {
+  main { padding: .75rem; }
+  .portfolio > section { grid-template-columns: 1fr; }
+  .portfolio img { max-width: 100%; }
+}
+
+@media (max-width: 520px) {
+  .competences { grid-template-columns: 1fr; }
+  .portfolio-tabs { flex-wrap: wrap; }
+}
+
+/* Utility classes usable via JS if needed */
+.hidden { display: none !important; }
+.show { display: block !important; }
+
+
