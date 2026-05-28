@@ -103,7 +103,7 @@ main > section#contact { display: block !important; }
 }
 
 /* Portfolio filter "buttons" based on existing anchors */
-.univB, .persoB {
+.univB, .persoB, .stage2025B, .stage2026B {
   display: inline-flex;
   align-items: center;
   padding: .55rem .9rem;
@@ -118,7 +118,8 @@ main > section#contact { display: block !important; }
 
 .univB:hover, .univB:focus,
 .persoB:hover, .persoB:focus,
-.stage2025:hover, .stage2025:focus { background: rgba(148,163,184,.16); }
+.stage2025B:hover, .stage2025B:focus,
+.stage2026B:hover, .stage2026B:focus { background: rgba(148,163,184,.16); }
 
 /* Place the two portfolio buttons on one line and centered */
 #portfolio { text-align: center; }
@@ -161,9 +162,9 @@ main > section#contact { display: block !important; }
 }
 #contact h3 { font-weight: 500; }
 
-/* Portfolio visibility driven by .activeP (controlled by JS in portfolio.js) */
-.portfolio { display: none; }
-.portfolio.activeP { display: block; }
+/* Portfolio & stages visibility driven by .activeP (controlled by JS in portfolio.js) */
+.portfolio, .stage { display: none; }
+.portfolio.activeP, .stage.activeP { display: block; }
 
 /* Responsive */
 @media (max-width: 900px) {

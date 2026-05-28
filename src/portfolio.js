@@ -46,3 +46,47 @@ persoB.addEventListener('click', (e) => {
         univOpen = false;
     }
 })
+
+function activeStage(nouveau){
+    const active = document.querySelector('.stage.activeP');
+    if(active != null){
+        active.classList.remove('activeP');
+    }
+    if(nouveau != null){
+        nouveau.classList.add('activeP');
+    }
+}
+
+// Activer stage 2025
+const fichorga = document.querySelector('.stage.fichorga');
+const stage2025B = document.querySelector('.stage2025B');
+let stage2025Open = false;
+
+stage2025B.addEventListener('click', (e) => {
+    e.preventDefault();
+    if(stage2025Open){
+        activeStage(null);
+        stage2025Open = false;
+    }else{
+        activeStage(fichorga);
+        stage2025Open = true;
+        stage2026Open = false;
+    }
+});
+
+// Activer stage 2026
+const emothep = document.querySelector('.stage.emothep');
+const stage2026B = document.querySelector('.stage2026B');
+let stage2026Open = false;
+
+stage2026B.addEventListener('click', (e) => {
+    e.preventDefault();
+    if(stage2026Open){
+        activeStage(null);
+        stage2026Open = false;
+    }else{
+        activeStage(emothep);
+        stage2026Open = true;
+        stage2025Open = false;
+    }
+});
