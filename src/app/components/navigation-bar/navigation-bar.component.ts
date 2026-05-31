@@ -13,4 +13,8 @@ export class NavigationBarComponent {
     public toHome(): void {
         this.router.navigateByUrl('');
     }
+
+    public openCV(): void {
+        window.open('https://drive.google.com/drive/folders/1PDGnXR3ES0e_Zm8LQcidAw9oCWyOr2hK?usp=sharing', '_blank');
+    }
 }
