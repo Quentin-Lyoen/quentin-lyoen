@@ -19,3 +19,16 @@ section {
     font-size: 1.1em;
     line-height: 1.6;
 }
+
+a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(148,163,184,.25);
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+a:hover {
+    font-weight: bold;
+    border-color: black;
+}
