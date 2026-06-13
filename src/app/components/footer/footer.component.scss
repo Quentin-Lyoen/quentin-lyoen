@@ -2,7 +2,7 @@
     color: white;
     width: 80%;
     background-color: #1a294a;
-    margin-top: 2em;
+    margin-top: auto;
 }
 
 h1 {
@@ -24,5 +24,9 @@ ul {
     a:hover {
         cursor: pointer;
         text-decoration: underline;
+    }
+
+    li {
+        margin-bottom: 10px;
     }
 }
