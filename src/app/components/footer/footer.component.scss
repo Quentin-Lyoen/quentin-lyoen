@@ -16,4 +16,13 @@ ul {
     padding: 0;
     font-weight: 200;
     padding-left: 1em;
+
+    a {
+        color: #2563eb;
+    }
+
+    a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
 }
