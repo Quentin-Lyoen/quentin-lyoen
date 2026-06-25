@@ -14,6 +14,20 @@
 <h1>- Stages -</h1>
 
 <div>
-    <button>Stage 2025 - Fichorga</button>
-    <button>Stage 2026 - E-Mothep</button>
+    <button (click)="selectStage('fichorga')" [class.active]="activeStage === 'fichorga'">Stage 2025 - Fichorga</button>
+    <button (click)="selectStage('emothep')" [class.active]="activeStage === 'emothep'">Stage 2026 - E-Mothep</button>
 </div>
+
+@if (activeStage === 'fichorga') {
+    <app-experience-card
+        title="Stage 2025 - Fichorga : Développement de tests unitaires sur une API REST"
+        img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQElTvzIkzG4X1P-SvxvZhUxfOGoKdZtumGeA&s"
+        desc="Ce stage a eu lieu en deuxième année de BUT informatique. J'ai eu l'honneur de travailler pendant 2 mois pour l'entreprise Fichorga située à Templemars. J'ai principalement travaillé sur leur API REST et des tests unitaires afin de pouvoir vérifier si l'application fonctionne correctement. Durant ces deux mois, j'ai pu apprendre à travailler au sein d'une équipe professionnelle mais aussi à découvrir le fonctionnement général d'une entreprise et toutes les règles qui vont avec. J'y ai aussi appris à utiliser le framework Spring Boot mais aussi Mockito pour le développement de tests unitaires. Ce premier stage a été pour moi une révélation et a confirmé mon choix professionnel, le développement informatique."
+        langages="Java, Spring, Mockito, SQL" />
+} @else if (activeStage === 'emothep') {
+    <app-experience-card
+        title="Stage 2026 - E-Mothep : Développement d'un logiciel de gestion d'astreintes"
+        img="https://media.licdn.com/dms/image/v2/D4E0BAQG6OzOoaG33eg/company-logo_200_200/B4EZfFpJ4LGwAI-/0/1751367589745/e_mothep_consultants_logo?e=2147483647&v=beta&t=sGREHZUXj0Ch0s-_Jjq9RnYraBmeIUQndj5_HGiFE1I"
+        desc="Ce stage a eu lieu en troisième année de BUT informatique. J'ai eu l'honneur de travailler pendant 3 mois pour l'entreprise E-Mothep située à Villeneuve-d'Ascq. J'ai principalement travaillé sur le développement complet d'un logiciel interne pour la gestion des astreintes. C'est-à-dire que j'ai développé toute la partie backend et frontend seul. Que ce soit le développement général, les tests unitaires ou encore la documentation. Il m'a été demandé de travailler le plus possible avec l'intelligence artificielle. Ce que j'ai fait pour les tâches répétitives, je trouve aussi que l'IA est un bon outil d'apprentissage lorsqu'on ne confie pas tout le développement à cet outil. Ce second stage a été pour moi un énorme gain de compétences en y apprenant toutes les bonnes pratiques durant la phase complète de développement."
+        langages="Java, Spring, Javascript, Angular, SQL" />
+}
