@@ -1,0 +1,119 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards ease-out;
+}
+
+.modal-content {
+    background-color: #1e293b;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 16px;
+    padding: 2.5rem 2rem 2rem 2rem;
+    position: relative;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    animation: scaleUp 0.3s forwards cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    ::ng-deep app-footer {
+        width: 100% !important;
+        background-color: transparent !important;
+        margin-top: 0 !important;
+        display: block !important;
+
+        h1 {
+            margin-top: 0;
+            font-size: 2.2em;
+            color: white;
+            text-align: center;
+        }
+
+        ul {
+            padding: 0;
+            margin: 1.5rem 0 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            font-size: 1.2em;
+            list-style: none;
+
+            li {
+                margin-bottom: 0;
+                color: #e2e8f0;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 8px;
+            }
+
+            a {
+                color: #3b82f6;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.2s;
+
+                &:hover {
+                    color: #60a5fa;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s, transform 0.2s;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+
+    &:hover {
+        color: white;
+        background-color: rgba(255, 255, 255, 0.05);
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    to {
+        transform: scale(1);
+    }
+}

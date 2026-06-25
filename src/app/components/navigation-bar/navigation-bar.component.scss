@@ -1,0 +1,54 @@
+:host {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a294a;
+    padding: 0.5em;
+    font-size: 1.5em;
+    width: 80%;
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+a:focus, a:hover {
+    color: #2156c6;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+
+    button {
+        color: white;
+        background-color: rgba(148,163,184,.08);
+        border: 1px solid rgba(148,163,184,.25);
+        border-radius: 10px;
+        padding: 1em;
+        cursor: pointer;
+    }
+
+    button:hover, button:focus {
+        background: rgba(148,163,184,.18);
+        border-color: rgba(148,163,184,.4);
+    }
+
+    .cv {
+        background: #2563eb; /* blue-600 */
+        color: #ffffff;
+        border-color: transparent;
+    }
+
+    .cv:hover, .cv:focus {
+        background: #1d4ed8; /* blue-700 */
+        border-color: transparent;
+    }
+}

@@ -1,0 +1,14 @@
+<app-navigation-bar (contactClick)="showContactModal = true" />
+
+<router-outlet class="router"></router-outlet>
+
+<app-footer />
+
+@if (showContactModal) {
+    <div class="modal-overlay" (click)="showContactModal = false">
+        <div class="modal-content" (click)="$event.stopPropagation()">
+            <button class="close-btn" (click)="showContactModal = false">&times;</button>
+            <app-footer />
+        </div>
+    </div>
+}

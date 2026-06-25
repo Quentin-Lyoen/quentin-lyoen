@@ -1,0 +1,21 @@
+<h1>- Soft-Skills -</h1>
+
+<div class="skills-grid">
+    @for (skill of softSkills; track skill.title) {
+        <app-softskills-card
+            [title]="skill.title"
+            [img]="skill.img"
+            [desc]="skill.desc" />
+    }
+</div>
+
+<h1>- Mes passions -</h1>
+
+<div class="passions-grid">
+    @for (passion of passions; track passion.title) {
+        <app-softskills-card
+            [title]="passion.title"
+            [img]="passion.img"
+            [desc]="passion.desc" />
+    }
+</div>
