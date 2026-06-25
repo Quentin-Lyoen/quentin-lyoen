@@ -1,0 +1,21 @@
+<div class="card-body">
+    <h2>{{title()}}</h2>
+
+    <div class="card-main">
+        @if (img()) {
+        <img [src]="img()" alt="Aperçu du projet">
+        }
+        <div class="card-content">
+            <p class="description">{{desc()}}</p>
+
+            <div class="tech-info">
+                <p><strong>Langages :</strong> {{langages()}}</p>
+                @if (logiciels()) {
+                <p><strong>Logiciels :</strong> {{logiciels()}}</p>
+                }
+            </div>
+
+            <a [href]="link()" target="_blank" rel="noopener noreferrer">Lien vers le projet</a>
+        </div>
+    </div>
+</div>

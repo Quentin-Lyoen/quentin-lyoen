@@ -1,0 +1,19 @@
+<h1>- Portfolio -</h1>
+
+<div>
+    <button (click)="selectTab('university')" [class.active]="activeTab === 'university'">Projets universitaires</button>
+    <button (click)="selectTab('perso')" [class.active]="activeTab === 'perso'">Projets personnels</button>
+</div>
+
+@if (activeTab === 'university') {
+    <app-portfolio-university />
+} @else if (activeTab === 'perso') {
+    <app-portfolio-perso />
+}
+
+<h1>- Stages -</h1>
+
+<div>
+    <button>Stage 2025 - Fichorga</button>
+    <button>Stage 2026 - E-Mothep</button>
+</div>
