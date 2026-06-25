@@ -38,6 +38,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/quentin-lyoen/",
               "budgets": [
                 {
                   "type": "initial",
