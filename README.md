@@ -1,16 +1,29 @@
-## Hi there 👋
+# Salut, moi c'est Quentin ! 👋
 
-<!--
-**Quentin-Lyoen/quentin-lyoen** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Actuellement en route vers un **Master en Informatique à l'ULCO** (après un BUT Informatique à l'IUT de Lille), je suis un développeur passionné par la création d'applications web robustes et performantes.
 
-Here are some ideas to get you started:
+Je suis activement à la recherche d'une **alternance en développement logiciel / informatique** à partir de **septembre 2026**.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+### 🛠️ Ce que je fais au quotidien
+
+*   **Dernière expérience marquante :** J'ai récemment conçu et développé un logiciel complet de A à Z lors d'un stage de 3 mois chez E-Mothep, en assurant la livraison dans les délais impartis.
+*   **Mon terrain de jeu :** Le développement Full-Stack, avec une forte affinité pour l'architecture Back-end et la propreté du code.
+
+---
+
+### 🧰 Stack Technique
+
+| Technologie | Outils & Frameworks |
+| :--- | :--- |
+| **Back-end** | Java, Spring Boot, NestJS, SQL |
+| **Front-end** | Angular, TypeScript, HTML5 / CSS3 |
+| **DevOps & Tools** | Git, GitHub Pages |
+
+---
+
+### 📬 Me contacter
+
+*   💼 **LinkedIn :** [Ton lien LinkedIn](https://linkedin.com/in/ton-profil)
+*   🌐 **Mon Site Portfolio :** [quentin-lyoen.github.io](https://quentin-lyoen.github.io/quentin-lyoen/)
