@@ -1,0 +1,54 @@
+:host {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3em;
+
+    @media (max-width: 1024px) {
+        width: 90%;
+    }
+
+    @media (max-width: 768px) {
+        width: 95%;
+    }
+
+    h1 {
+        color: white;
+        font-size: 3em;
+        text-align: center;
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+
+        @media (max-width: 768px) {
+            font-size: 2.2em;
+            margin-top: 1em;
+            margin-bottom: 0.8em;
+        }
+    }
+}
+
+.skills-grid, .passions-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5em;
+    width: 100%;
+    margin-bottom: 2em;
+
+    app-softskills-card {
+        width: calc(33.333% - 1.7em);
+        min-width: 280px;
+        max-width: 340px;
+        display: flex;
+
+        @media (max-width: 1024px) {
+            width: calc(50% - 1.3em);
+        }
+
+        @media (max-width: 640px) {
+            width: 100%;
+            max-width: 360px;
+        }
+    }
+}

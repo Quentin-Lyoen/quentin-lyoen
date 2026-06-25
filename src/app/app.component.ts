@@ -13,8 +13,8 @@ export class AppComponent {
   title = 'portfolio';
   showContactModal = false;
 
-  @HostListener('document:keydown.escape', ['$event'])
-  onEscapeKey(event: KeyboardEvent) {
+  @HostListener('document:keydown.escape')
+  onEscapeKey() {
     if (this.showContactModal) {
       this.showContactModal = false;
     }
