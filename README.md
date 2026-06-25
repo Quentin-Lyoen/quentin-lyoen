@@ -25,5 +25,5 @@ Je suis activement à la recherche d'une **alternance en développement logiciel
 
 ### 📬 Me contacter
 
-*   💼 **LinkedIn :** [Ton lien LinkedIn](https://linkedin.com/in/ton-profil)
+*   💼 **LinkedIn :** [Mon LinkedIn](https://www.linkedin.com/in/quentin-lyoen/)
 *   🌐 **Mon Site Portfolio :** [quentin-lyoen.github.io](https://quentin-lyoen.github.io/quentin-lyoen/)
