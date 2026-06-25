@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavigationBarComponent } from "./components/navigation-bar/navigation-bar.component";
 import { FooterComponent } from "./components/footer/footer.component";
@@ -11,4 +11,12 @@ import { FooterComponent } from "./components/footer/footer.component";
 })
 export class AppComponent {
   title = 'portfolio';
+  showContactModal = false;
+
+  @HostListener('document:keydown.escape', ['$event'])
+  onEscapeKey(event: KeyboardEvent) {
+    if (this.showContactModal) {
+      this.showContactModal = false;
+    }
+  }
 }

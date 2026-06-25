@@ -1,5 +1,5 @@
-import { Component, inject } from "@angular/core";
-import { Router, RouterLink } from "@angular/router";
+import { Component, Output, EventEmitter } from "@angular/core";
+import { RouterLink } from "@angular/router";
 
 @Component({
     selector: 'app-navigation-bar',
@@ -8,6 +8,8 @@ import { Router, RouterLink } from "@angular/router";
     imports: [RouterLink],
 })
 export class NavigationBarComponent {
+    @Output() public contactClick = new EventEmitter<void>();
+
     public openCV(): void {
         window.open('https://drive.google.com/drive/folders/1PDGnXR3ES0e_Zm8LQcidAw9oCWyOr2hK?usp=sharing', '_blank');
     }

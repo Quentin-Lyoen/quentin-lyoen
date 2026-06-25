@@ -3,6 +3,6 @@
     <button routerLink="skills">Compétences</button>
     <button routerLink="degree">Diplômes</button>
     <button routerLink="portfolio">Portfolio</button>
-    <button>Me contacter</button>
+    <button (click)="contactClick.emit()">Me contacter</button>
     <button class="cv" (click)="openCV()">CV</button>
 </div>
