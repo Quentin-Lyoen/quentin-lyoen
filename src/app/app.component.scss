@@ -78,6 +78,20 @@
             }
         }
     }
+
+    @media (max-width: 768px) {
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
+
+        ::ng-deep app-footer {
+            h1 {
+                font-size: 1.8em;
+            }
+            ul {
+                font-size: 1.1em;
+                gap: 10px;
+            }
+        }
+    }
 }
 
 .close-btn {

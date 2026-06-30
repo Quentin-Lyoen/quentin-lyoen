@@ -3,12 +3,23 @@
     justify-content: space-between;
     align-items: center;
     background-color: #1a294a;
-    padding: 0.5em;
+    padding: 0.5em 1em;
     font-size: 1.5em;
     width: 80%;
     font-weight: 700;
     position: sticky;
     top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+
+    @media (max-width: 1024px) {
+        width: 90%;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 0.8em 1.2em;
+    }
 }
 
 a {
@@ -18,7 +29,44 @@ a {
 }
 
 a:focus, a:hover {
-    color: #2156c6;
+    color: #3b82f6;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
+
+    span {
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    &.active {
+        span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+        span:nth-child(2) {
+            opacity: 0;
+        }
+        span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+    }
+
+    @media (max-width: 768px) {
+        display: flex;
+    }
 }
 
 div {
@@ -29,16 +77,19 @@ div {
 
     button {
         color: white;
-        background-color: rgba(148,163,184,.08);
-        border: 1px solid rgba(148,163,184,.25);
+        background-color: rgba(148, 163, 184, 0.08);
+        border: 1px solid rgba(148, 163, 184, 0.25);
         border-radius: 10px;
-        padding: 1em;
+        padding: 0.7em 1.2em;
         cursor: pointer;
+        font-weight: 700;
+        font-size: 0.85em;
+        transition: all 0.2s ease;
     }
 
     button:hover, button:focus {
-        background: rgba(148,163,184,.18);
-        border-color: rgba(148,163,184,.4);
+        background: rgba(148, 163, 184, 0.18);
+        border-color: rgba(148, 163, 184, 0.4);
     }
 
     .cv {
@@ -50,5 +101,44 @@ div {
     .cv:hover, .cv:focus {
         background: #1d4ed8; /* blue-700 */
         border-color: transparent;
+    }
+
+    @media (max-width: 768px) {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: rgba(26, 41, 74, 0.98);
+        backdrop-filter: blur(12px);
+        padding: 2em 1em;
+        gap: 1.2em;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+        animation: slideDown 0.3s ease forwards;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+
+        &.active {
+            display: flex;
+        }
+
+        button {
+            width: 100%;
+            max-width: 300px;
+            padding: 1.1em;
+            font-size: 1em;
+            text-align: center;
+        }
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

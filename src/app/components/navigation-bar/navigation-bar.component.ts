@@ -10,7 +10,18 @@ import { RouterLink } from "@angular/router";
 export class NavigationBarComponent {
     @Output() public contactClick = new EventEmitter<void>();
 
+    public isMenuOpen = false;
+
+    public toggleMenu(): void {
+        this.isMenuOpen = !this.isMenuOpen;
+    }
+
+    public closeMenu(): void {
+        this.isMenuOpen = false;
+    }
+
     public openCV(): void {
+        this.isMenuOpen = false;
         window.open('https://drive.google.com/drive/folders/1PDGnXR3ES0e_Zm8LQcidAw9oCWyOr2hK?usp=sharing', '_blank');
     }
 }

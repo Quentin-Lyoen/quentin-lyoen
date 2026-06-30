@@ -1,8 +1,15 @@
-<a routerLink="">Quentin Lyoen</a>
-<div>
-    <button routerLink="skills">Compétences</button>
-    <button routerLink="degree">Diplômes</button>
-    <button routerLink="portfolio">Portfolio</button>
-    <button (click)="contactClick.emit()">Me contacter</button>
+<a routerLink="" (click)="closeMenu()">Quentin Lyoen</a>
+
+<button class="hamburger-menu" (click)="toggleMenu()" [class.active]="isMenuOpen" aria-label="Menu de navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<div [class.active]="isMenuOpen">
+    <button routerLink="skills" (click)="closeMenu()">Compétences</button>
+    <button routerLink="degree" (click)="closeMenu()">Diplômes</button>
+    <button routerLink="portfolio" (click)="closeMenu()">Portfolio</button>
+    <button (click)="contactClick.emit(); closeMenu()">Me contacter</button>
     <button class="cv" (click)="openCV()">CV</button>
 </div>

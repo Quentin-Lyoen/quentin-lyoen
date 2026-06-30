@@ -3,11 +3,24 @@
     width: 80%;
     background-color: #1a294a;
     margin-top: auto;
+
+    @media (max-width: 1024px) {
+        width: 90%;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 1.5em 1em;
+    }
 }
 
 h1 {
     text-align: center;
     font-size: 3em;
+
+    @media (max-width: 768px) {
+        font-size: 2em;
+    }
 }
 
 ul {
@@ -16,6 +29,11 @@ ul {
     padding: 0;
     font-weight: 200;
     padding-left: 1em;
+
+    @media (max-width: 768px) {
+        font-size: 1.1em;
+        padding-left: 0.5em;
+    }
 
     a {
         color: #2563eb;
@@ -28,5 +46,6 @@ ul {
 
     li {
         margin-bottom: 10px;
+        word-break: break-word;
     }
 }

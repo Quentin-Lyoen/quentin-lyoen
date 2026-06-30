@@ -6,11 +6,26 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 2em;
+
+    @media (max-width: 1024px) {
+        width: 90%;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 0 1em;
+    }
 }
 
 h1 {
     font-weight: bold;
     font-size: 3em;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        font-size: 2em;
+        margin-top: 1em;
+    }
 }
 
 section {
@@ -20,6 +35,11 @@ section {
     font-size: 1.1em;
     line-height: 1.6;
     background-color: #111827;
+
+    @media (max-width: 768px) {
+        padding: 1.2em;
+        font-size: 1em;
+    }
 }
 
 a {
@@ -28,9 +48,12 @@ a {
     border: 1px solid rgba(148,163,184,.25);
     border-radius: 20px;
     margin-top: 10px;
+    padding: 0 1em;
+    transition: all 0.2s ease;
 }
 
 a:hover {
     font-weight: bold;
-    border-color: black;
+    border-color: #3b82f6;
+    background-color: rgba(59, 130, 246, 0.05);
 }

@@ -18,6 +18,11 @@
     color: white;
     transition: all 0.3s ease;
 
+    @media (max-width: 768px) {
+        padding: 1.2em;
+        gap: 1em;
+    }
+
     &:hover {
         transform: translateY(-4px);
         border-color: rgba(56, 189, 248, 0.4);
@@ -33,6 +38,10 @@
         width: 100%;
         padding-bottom: 0.5em;
         border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+
+        @media (max-width: 768px) {
+            font-size: 1.5em;
+        }
     }
 
     .card-main {
